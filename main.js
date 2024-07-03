@@ -42,17 +42,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateChart() {
         const REFERANCE_2 = localStorage.getItem('username');
-        let date = localStorage.getItem('message');
-        let connector = "in";
-        let new_date = date + ' ' + connector + ' ' + REFERANCE_2; // Concatenate username with new_date
-        console.log(new_date);
+        let date_chart = localStorage.getItem('message');
+        let connector_1 = "in";
+        let chart_date = date_chart + ' ' + connector_1 + ' ' + REFERANCE_2; // Concatenate username with new_date
+        console.log(chart_date);
         
         let connector_2 = "out";
-        let new_2_date = date + ' ' + connector_2 + ' ' + REFERANCE_2; // Concatenate username with new_date
-        console.log(new_2_date);
+        let chart_2_date = date_chart + ' ' + connector_2 + ' ' + REFERANCE_2; // Concatenate username with new_date
+        console.log(chart_2_date);
 
-        let cashInData = localStorage.getItem(new_date);
-        let cashOutData = localStorage.getItem(new_2_date);
+        let cashInData = localStorage.getItem(chart_date);
+        let cashOutData = localStorage.getItem(chart_2_date);
 
         // Convert the retrieved values to numbers
         cashInData = cashInData ? Number(cashInData) : 0;
