@@ -67,7 +67,7 @@ function displayExpenses(date) {
         // Create a row for displaying the total amount
         const totalAmountInput = document.getElementById('total-amount');
         totalAmountInput.value = totalAmount_out;
-        localStorage.setItem(date, totalAmount_out );
+        localStorage.setItem(new_date, totalAmount_out );
     });
 }
 
