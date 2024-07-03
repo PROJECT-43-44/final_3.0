@@ -41,12 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function updateChart() {
+        const REFERANCE_2 = localStorage.getItem('username');
         let date = localStorage.getItem('message');
         let connector = "in";
-        let new_date = date + ' ' + connector;
+        let new_date = date + ' ' + connector + ' ' + REFERANCE_2; // Concatenate username with new_date
+        console.log(new_date);
+        
+        let connector_2 = "out";
+        let new_2_date = date + ' ' + connector_2 + ' ' + REFERANCE_2; // Concatenate username with new_date
+        console.log(new_2_date);
 
         let cashInData = localStorage.getItem(new_date);
-        let cashOutData = localStorage.getItem(date);
+        let cashOutData = localStorage.getItem(new_2_date);
 
         // Convert the retrieved values to numbers
         cashInData = cashInData ? Number(cashInData) : 0;
